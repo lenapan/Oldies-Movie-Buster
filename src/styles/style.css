@@ -1,5 +1,22 @@
 body {
-  text-align: center;
+  background-image: linear-gradient(
+    to top,
+    #7aada0,
+    #6aa8aa,
+    #64a1b2,
+    #6999b7,
+    #778fb6,
+    #8c8cb6,
+    #a088b1,
+    #b185a7,
+    #c68aa1,
+    #d59399,
+    #de9e91,
+    #e1ab8b
+  );
+}
+header {
+  background-image: linear-gradient(to top, #8e80a9, #9e83ab);
 }
 .card-cover {
   background-repeat: no-repeat;
@@ -8,4 +25,14 @@ body {
 }
 .rounded-5 {
   border-radius: 0.3rem;
+}
+.container.popUpWrapper {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.popupCloser {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  color: #000;
 }

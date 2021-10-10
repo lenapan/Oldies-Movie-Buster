@@ -52,12 +52,12 @@ const getMovies = (API) => {
     <h1 className="display-4 fw-bold">VHS video  Rental</h1>
     <div className="col-lg-6 mx-auto">
       <p className="lead mb-4">Enjoy our full collection of VHS classic movies</p>
-      <div className="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+      <div className="justify-content-sm-center mb-5">
         
         
           <form onSubmit={handleOnSubmit}>
-          <div class="input-group input-group-lg">
-  <input type="search"   class="form-control rounded" placeholder="Search..." value={searchTerm} onChange={handleOnChange} />
+          <div className="input-group input-group-lg">
+  <input type="search"   className="form-control rounded" placeholder="Search..." value={searchTerm} onChange={handleOnChange} />
   </div>
 
            
@@ -65,11 +65,11 @@ const getMovies = (API) => {
         
       </div>
     </div>
-    <div className="overflow-hidden" >
+    {/* <div className="overflow-hidden" >
       <div className="container px-5">
         <img src="https://developer.imdb.com/hero-dynamic.jpg" className="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy"/>
       </div>
-    </div>
+    </div> */}
   </div>
   </div>
 
