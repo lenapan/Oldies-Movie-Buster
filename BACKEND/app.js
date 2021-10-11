@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoPractice = require('./mongo');
+const mongo2 = require('./mongo2');
 
 const app = express();
 
@@ -13,9 +14,10 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE');
     next();
 })
+app.post('/Comments', mongoPractice.ADD);
+app.post('/Titles', mongo2.addTitles);
 
-app.post('/Comments', mongoPractice.ADD); 
-// ADD and getComments are functions from our mongo.js file
 app.get('/Comments', mongoPractice.getComments);
+app.get('/Titles', mongo2.retrieveTitles);
 
 app.listen(5000 || process.env.PORT); //Heroku provides port

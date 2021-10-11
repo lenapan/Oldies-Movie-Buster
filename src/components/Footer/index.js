@@ -3,7 +3,9 @@ import "./style.css";
 
 function Footer(props) {
     return (
-    <small>Copyright {props.year}</small>
+    <section class = "footer">
+        <small><strong>Copyright {props.year}</strong> </small>
+    </section>
     );
 }
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-
+import Form from "./Form";
 import Modal from "react-modal";
+import axios from "axios";
 
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 
@@ -14,24 +15,24 @@ const setVoteClass = (vote) => {
     }
 }
 
-
-
-
-
 function Movie ({ title, poster_path, overview, vote_average, release_date }) { 
 
 const [modalIsOpen, setModalIsOpen] = useState(false);
 
+function addToCart(){
+    var movieAdd = title;
+    axios.post('http://localhost:5000/Titles' || process.env.PORT, {
+      titles: movieAdd,     
+      })
+    .then((response) => {   console.log(`Added to cart:  ${movieAdd}`);
+     // alert(`Added to cart:  ${movieAdd}`);
+    })
+    .catch((error) =>{
+      console.log(error);
+    })
 
-
+}
   return(
-
-
-
-
-
-
-
 
 <div className="col">
         <div className="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style={{ 
@@ -60,7 +61,7 @@ const [modalIsOpen, setModalIsOpen] = useState(false);
             
             <div className="btn-group" role="group" aria-label="Basic mixed styles example">
               
-              <button type="button" className="btn btn-warning">Add to Cart</button>
+              <button type="button" className="btn btn-warning" id={title} onClick={addToCart}>Add to Cart</button>
               <button onClick={() => setModalIsOpen(true)} type="button" className="btn btn-primary">View detail</button>
               {/*  */}
 
@@ -89,7 +90,7 @@ const [modalIsOpen, setModalIsOpen] = useState(false);
                   </div>
                   <div className="col-4 pt-5">
                     <p>{overview}</p>
-                    <button type="button" className="btn btn-warning">Add to Cart</button>
+                    <button type="button" className="btn btn-warning" id={title} onClick={addToCart}>Add to Cart</button>
                     <button onClick={() => setModalIsOpen(false)} type="button" className="popupCloser btn btn-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
                       <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
@@ -98,22 +99,7 @@ const [modalIsOpen, setModalIsOpen] = useState(false);
                   
                   </div>
                   <div className="col-4 pt-5">
-                  <div>
-                  <h3>Customer comment</h3>
-                        <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                      </div>
-                  <div className="mb-3">
-                    <h3>Add your comment</h3>
-                      <label for="exampleFormControlInput1" className="form-label">Email address</label>
-                      <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
-                    </div>
-                    <div className="mb-3">
-                      
-                      <label for="exampleFormControlTextarea1" className="form-label">Add your comment</label>
-                      <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
+                  <Form/>
                   </div>
                   </div>
                 </div>
