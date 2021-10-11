@@ -6,7 +6,7 @@ function getItems(){
     const element = document.querySelector(".last-comment");     
     axios.get('http://localhost:5000/Comments' || process.env.PORT)
     .then( response =>   response.data.forEach(function(db){ //function(db, i, newArray) 
-        console.log(element.innerHTML = `${db.user} says "${db.comment}"`)//Will appear in both console.log and the DOM
+        console.log(element.innerHTML = `<strong>${db.user} says</strong> "${db.comment}"`)//Will appear in both console.log and the DOM
     })
     );
 }
@@ -33,7 +33,7 @@ class Form extends React.Component {
             const element = document.querySelector(".last-comment");     
             axios.get('http://localhost:5000/Comments' || process.env.PORT)
             .then( response =>   response.data.map((db) => {   
-               console.log(element.innerHTML = `${db.user} says "${db.comment}"`) //Will appear in both console.log and the DOM
+               console.log(element.innerHTML = `<strong>${db.user} says</strong> "${db.comment}"`) //Will appear in both console.log and the DOM
             })
             );
         }
@@ -57,5 +57,4 @@ class Form extends React.Component {
             );
         }
 } 
- // <i class="fa fa-chevron-circle-left"></i><i class="fa fa-chevron-circle-right"></i> 
 export default Form;
