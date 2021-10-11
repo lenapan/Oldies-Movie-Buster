@@ -9,10 +9,11 @@ function Cart(){
         event.preventDefault();
         axios.get('http://localhost:5000/api/Titles' || process.env.PORT)
           .then(response => {  
-            // response.data.forEach(function(db){
-            //   element.innerHTML = `<li>${db.titles}</li>`
+               response.data.map((db) =>{
+            //   element.innerHTML = `<p>${db.titles}</p>`      
             // })
             element.innerHTML = `<strong>${response.data.length}</strong> item(s) are your cart`
+            console.log(element.content = `${db.titles} is in your cart`) })
           })
           .catch((error) =>{
             console.log(error);
