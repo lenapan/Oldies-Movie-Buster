@@ -30,7 +30,7 @@ const getComments = async (req, res, next) => {
   try {
     await client.connect();
     const db = client.db();
-    Comments = await db.collection('Comments').find().toArray();  console.log("GET request success!")
+    Comments = await db.collection('Comments').find().toArray();
     // for (var i = 0; i < Comments.length; i++){ 
     //   console.log(`${Comments[i].user} says "${Comments[i].comment}"`);
     // }

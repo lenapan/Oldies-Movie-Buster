@@ -74,3 +74,6 @@ header {
   top: 0px;
   color: #000;
 }
+.add-btn:active{
+background-color:#198754;
+}

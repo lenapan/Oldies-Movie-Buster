@@ -9,11 +9,11 @@ function Cart(){
         event.preventDefault();
         axios.get('http://localhost:5000/api/Titles' || process.env.PORT)
           .then(response => {  
-               response.data.map((db) =>{
-            //   element.innerHTML = `<p>${db.titles}</p>`      
-            // })
-            element.innerHTML = `<strong>${response.data.length}</strong> item(s) are your cart`
-            console.log(element.content = `${db.titles} is in your cart`) })
+            element.innerHTML = `<strong>${response.data.length}</strong> item(s) are in your cart`
+            response.data.map((db) => {
+               console.log(element.content = `${db.titles} is in your cart`) 
+            })
+             //   element.innerHTML = `<p>${db.titles}</p>`             
           })
           .catch((error) =>{
             console.log(error);

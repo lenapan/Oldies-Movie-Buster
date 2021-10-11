@@ -27,7 +27,7 @@ const retrieveTitles = async (req, res, next) => {
   try {
     await client.connect();
     const db = client.db();
-    titles = await db.collection('titles').find().toArray();  console.log("GET request success!")
+    titles = await db.collection('titles').find().toArray();
   } catch (error) {
     return res.json({message: 'Could not retrieve comments.'});
   };
