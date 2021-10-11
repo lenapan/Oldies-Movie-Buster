@@ -7,12 +7,12 @@ function Cart(){
     function clickCart(event){
         const element = document.querySelector(".cartInfo");
         event.preventDefault();
-        axios.get('http://localhost:5000/Titles' || process.env.PORT)
+        axios.get('http://localhost:5000/api/Titles' || process.env.PORT)
           .then(response => {  
             // response.data.forEach(function(db){
             //   element.innerHTML = `<li>${db.titles}</li>`
             // })
-            element.innerHTML = `<strong>${response.data.length}</strong> items are your cart`
+            element.innerHTML = `<strong>${response.data.length}</strong> item(s) are your cart`
           })
           .catch((error) =>{
             console.log(error);

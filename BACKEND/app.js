@@ -14,10 +14,10 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE');
     next();
 })
-app.post('/Comments', mongoPractice.ADD);
-app.post('/Titles', mongo2.addTitles);
+app.post('/api/Comments', mongoPractice.ADD);
+app.post('/api/Titles', mongo2.addTitles);
 
-app.get('/Comments', mongoPractice.getComments);
-app.get('/Titles', mongo2.retrieveTitles);
+app.get('/api/Comments', mongoPractice.getComments);
+app.get('/api/Titles', mongo2.retrieveTitles);
 
 app.listen(5000 || process.env.PORT); //Heroku provides port

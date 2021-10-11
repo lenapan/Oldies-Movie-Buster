@@ -21,7 +21,7 @@ const [modalIsOpen, setModalIsOpen] = useState(false);
 
 function addToCart(){
     var movieAdd = title;
-    axios.post('http://localhost:5000/Titles' || process.env.PORT, {
+    axios.post('http://localhost:5000/api/Titles' || process.env.PORT, {
       titles: movieAdd,     
       })
     .then((response) => {   console.log(`Added to cart:  ${movieAdd}`);
