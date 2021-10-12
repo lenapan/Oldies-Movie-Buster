@@ -42,7 +42,7 @@ Our Goal is to give our customers that nostalgic feelings of renting movies in t
 - Eguagie Iyalekhue <egkyale@gmail.com>
 - Frank Limon <tonylimon8@icloud.com>
 - Sam Chan <sammychan@aol.com>
-- Tahmina Ahmed <tfahmed@yahoo.com>
+- Tahmina Ahmed <tfahmed2@yahoo.com>
 
 
 # Getting Started with Create React App
