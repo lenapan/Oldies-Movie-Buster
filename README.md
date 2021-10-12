@@ -1,3 +1,50 @@
+# Welcome to Oldie's Blockbuster
+
+** Version 1.0.0
+
+A Blast to the Past!
+
+## Our Goal
+
+Our Goal is to give our customers that nostalgic feelings of renting movies in the 80's and 90's while still providing a modern user experience.
+
+## Demo
+
+![](/project2Screenshot.png)
+
+## Basic Features
+
+- Lists movies with retro designs
+- Movies are categorized 
+- Each VHS tape shows rental price and sale price
+- Each movie has an indicator to show the user run time
+
+## Technologies Used 
+
+- JavaScript
+- MongoDB
+- Node.js
+- React.js
+- ES6
+- BootStrap
+- Express
+- Babel
+- Axios
+- Heroku
+- Nodemon
+- React-Dom
+- Body-Parser
+
+## Contributers 
+
+- Dauoda Dia <diarise@gmail.com>
+- Lena Pan <lenapan.tech@gmail.com>
+- Eguagie Iyalekhue <egkyale@gmail.com>
+- Frank Limon <tonylimon8@icloud.com>
+- Sam Chan <sammychan@aol.com>
+- Tahmina Ahmed <tfahmed@yahoo.com>
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -39,39 +86,6 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## License & copyright
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-API stuff
-featured: "https://api.themoviedb.org/3/discover/movie?sort_bypopularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1"
-
-images: "https://image.tmdb.org/t/p/w1280"
-
-search: "https://api.themoviedb.org/3/search/movie?api_key=04c35731a5ee918f014970082a0088b1&query="
+© Group 2 Front-End Web Developement BootCamp
