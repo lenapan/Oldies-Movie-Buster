@@ -4,7 +4,7 @@ import "./form.css";
 
 function getItems(){
     const element = document.querySelector(".last-comment");     
-    axios.get('http://localhost:5000/api/Comments' || process.env.PORT)
+    axios.get('https://test99ways2win.herokuapp.com/api/Comments')
     .then( response =>   response.data.forEach(function(db){ //function(db, i, newArray) 
         console.log(element.innerHTML = `<strong>${db.user} says</strong> "${db.comment}"`)//Will appear in both console.log and the DOM
     })
@@ -15,7 +15,7 @@ class Form extends React.Component {
             event.preventDefault();    
             const resComment = document.querySelector("#comment"); 
             const resUser = document.querySelector("#user");
-            axios.post('http://localhost:5000/api/Comments' || process.env.PORT, {
+            axios.post('https://test99ways2win.herokuapp.com/api/Comments', {
                 user: this.refs.user.value,
                 comment: this.refs.comment.value
             })
@@ -31,7 +31,7 @@ class Form extends React.Component {
         getItems(event){
             event.preventDefault();
             const element = document.querySelector(".last-comment");     
-            axios.get('http://localhost:5000/api/Comments' || process.env.PORT)
+            axios.get('https://test99ways2win.herokuapp.com/api/Comments')
             .then( response =>   response.data.map((db) => {   
                console.log(element.innerHTML = `<strong>${db.user} says</strong> "${db.comment}"`) //Will appear in both console.log and the DOM
             })

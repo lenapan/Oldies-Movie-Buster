@@ -21,7 +21,7 @@ const [modalIsOpen, setModalIsOpen] = useState(false);
  
 function addToCart(){
     var movieAdd = title;
-    axios.post('http://localhost:5000/api/Titles' || process.env.PORT, {
+    axios.post('https://test99ways2win.herokuapp.com/api/Titles', {
       titles: movieAdd,     
       })
     .then((response) => {   console.log(`Added to cart:  ${movieAdd}`);
