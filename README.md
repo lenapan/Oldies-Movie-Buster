@@ -35,7 +35,7 @@ Our Goal is to give our customers that nostalgic feelings of renting movies in t
 - React-Dom
 - Body-Parser
 
-## Contributers 
+## Contributors
 
 - Dauoda Dia <diarise@gmail.com>
 - Lena Pan <lenapan.tech@gmail.com>
