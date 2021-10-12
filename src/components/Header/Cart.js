@@ -7,7 +7,7 @@ function Cart(){
     function clickCart(event){
         const element = document.querySelector(".cartInfo");
         event.preventDefault();
-        axios.get('http://localhost:5000/api/Titles' || process.env.PORT)
+        axios.get('https://test99ways2win.herokuapp.com/api/Titles' || process.env.PORT)
           .then(response => {  
             element.innerHTML = `<strong>${response.data.length}</strong> item(s) are in your cart`
             response.data.map((db) => {
