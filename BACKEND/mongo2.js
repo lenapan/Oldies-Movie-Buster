@@ -35,6 +35,19 @@ const retrieveTitles = async (req, res, next) => {
 
   res.json(titles);
 };
-  
+const deleteTitles = async (req, res) => {
+  const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
+  let t;
+  try{
+    await client.connect();
+    const db = client.db();
+    t = await db.collection('titles').deleteMany();
+  } catch (error){
+    return res.json({message: 'Could not delete data.'});
+  };
+ 
+  res.json(t);
+}
 exports.addTitles = addTitles;
 exports.retrieveTitles = retrieveTitles;
+exports.deleteTitles = deleteTitles;
