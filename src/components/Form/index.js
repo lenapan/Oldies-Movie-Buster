@@ -47,7 +47,7 @@ class Form extends React.Component {
                     <button className="btn waves-effect waves-light btn3" type="submit"
                     nme="action">Add Comment</button>
                 </form>
-                <form className ="form" onSubmit={this.getItems.bind(this)}>
+                <form className ="form" onPointerEnter={this.getItems.bind(this)}>
                     <button className="btn waves-effect waves-light btn2" type="submit"
                     nme="action"><i class="fa fa-chevron-circle-left"><i class="fa fa-chevron-circle-right"></i></i></button>
                    <p class="last-comment"></p>

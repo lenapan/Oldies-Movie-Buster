@@ -18,13 +18,16 @@ const setVoteClass = (vote) => {
 function Movie ({ title, poster_path, overview, vote_average, release_date }) { 
 
 const [modalIsOpen, setModalIsOpen] = useState(false);
- 
+const [addToOpen, setAddToOpen] = useState(false);
+
 function addToCart(){
+    const element = document.querySelector(".addClass");
     var movieAdd = title;
     axios.post('https://test99ways2win.herokuapp.com/api/Titles', {
       titles: movieAdd,     
       })
     .then((response) => {   console.log(`Added to cart:  ${movieAdd}`);
+    setAddToOpen(true);
     // alert(`Added to cart:  ${movieAdd}`);
     })
     .catch((error) =>{
@@ -105,7 +108,30 @@ function addToCart(){
                 </div>
               
               </Modal>
-                
+              <Modal 
+                isOpen={addToOpen} 
+                onRequestClose={() => setAddToOpen(false)}
+                style={
+                  {
+                    overlay: {
+                      backgroundColor: 'rgba(0, 0, 0, 0.1)'
+                  },
+                  content: {
+                    padding: '0px',
+                    width: '25%',
+                    height: '25%',
+                    marginLeft: '34%'
+                  }
+                  }
+                  
+                }>
+                <p className="confirmation">Added!</p>
+                <button onPointerOut={() => setAddToOpen(false)} type="button" className="popupCloser btn btn-link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+                  </svg>
+                </button>
+              </Modal>
 
               {/*  */}
             </div>

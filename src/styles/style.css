@@ -77,3 +77,6 @@ header {
 .add-btn:active{
 background-color:#198754;
 }
+.confirmation{
+  text-align: center;
+}
