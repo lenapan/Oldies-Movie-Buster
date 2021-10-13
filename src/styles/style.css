@@ -80,3 +80,12 @@ background-color:#198754;
 .confirmation{
   text-align: center;
 }
+.closeConfirm{
+  width:100%;
+  height: 100%;
+  color:#fff;
+}
+.fa-times{
+  font-size: 30px;
+  color: skyblue;
+}
