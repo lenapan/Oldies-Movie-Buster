@@ -12,8 +12,7 @@ function Cart(){
             element.innerHTML = `<strong>${response.data.length}</strong> item(s) are in your cart`
             response.data.map((db) => {
                console.log(element.content = `${db.titles} is in your cart`) 
-            })
-             //   element.innerHTML = `<p>${db.titles}</p>`             
+            })            
           })
           .catch((error) =>{
             console.log(error);
@@ -21,7 +20,7 @@ function Cart(){
     }
     return(
         <>
-        <i onClick={() => setModalIsOpen(true)}><i class="fa fa-shopping-cart"></i></i>
+        <button type="button" onClick={() => setModalIsOpen(true)} class="btn btn-success fa fa-shopping-cart"></button>
         <Modal 
               portalClassName="cartModal"
               isOpen={modalIsOpen} 

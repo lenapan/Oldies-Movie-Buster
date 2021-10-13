@@ -26,9 +26,7 @@ function addToCart(){
     axios.post('https://test99ways2win.herokuapp.com/api/Titles', {
       titles: movieAdd,     
       })
-    .then((response) => {   console.log(`Added to cart:  ${movieAdd}`);
-    setAddToOpen(true);
-    // alert(`Added to cart:  ${movieAdd}`);
+    .then((response) => {   setAddToOpen(true);
     })
     .catch((error) =>{
       console.log(error);
@@ -120,14 +118,15 @@ function addToCart(){
                     padding: '0px',
                     width: '25%',
                     height: '25%',
-                    marginLeft: '34%'
+                    marginLeft: '34%',
+                    marginTop: '11%'
                   }
                   }
                   
                 }>
-                <p className="confirmation">Added!</p>
-                <button onPointerOut={() => setAddToOpen(false)} type="button" className="popupCloser closeConfirm btn btn-link">
-                <i class="fa fa-times"></i>
+                <p className="confirmation"> Added to Cart: </p><p className="confirmation"><strong>{title}</strong></p>
+                <button onPointerEnter={() => setAddToOpen(false)} type="button" className="popupCloser fa fa-times btn btn-link">
+                  <i class="fa fa-smile-o"></i>
                 </button>
               </Modal>
 
