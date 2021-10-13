@@ -22,7 +22,7 @@ const addTitles= async (req, res, next) => {
 const retrieveTitles = async (req, res, next) => {
   const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
-  let titles; // if this variable name doesn't match a collection in the database, it doesn't seem to work
+  let titles;
 
   try {
     await client.connect();

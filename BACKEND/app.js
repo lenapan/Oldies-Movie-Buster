@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoPractice = require('./mongo');
 const mongo2 = require('./mongo2');
+const mongo3 = require('./mongo3');
 
 const app = express();
 
@@ -16,9 +17,12 @@ app.use((req, res, next) => {
 })
 app.post('/api/Comments', mongoPractice.ADD);
 app.post('/api/Titles', mongo2.addTitles);
+app.post('/api/Name', mongo3.addName);
 
 app.get('/api/Comments', mongoPractice.getComments);
 app.get('/api/Titles', mongo2.retrieveTitles);
+app.get('/api/Name', mongo3.getName);
 
 app.delete('/api/Titles', mongo2.deleteTitles);
-app.listen(5000 || process.env.PORT); //Heroku provides port
+
+app.listen(process.env.PORT || 5000); //Heroku provides port
