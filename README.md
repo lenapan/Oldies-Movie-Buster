@@ -1,12 +1,12 @@
-# Welcome to Oldie's Blockbuster
+## Welcome to Oldie's Movie Buster
 
 ** Version 1.0.0
 
-A Blast to the Past!
+# A Blast to the Past!
 
 ## Our Goal
 
-Our Goal is to give our customers that nostalgic feelings of renting movies in the 80's and 90's while still providing a modern user experience.
+Our goal is to give users/customers that nostalgic feelings of renting movies from the 80's and 90's while still providing a modern user experience.
 
 ## Demo
 
@@ -14,10 +14,11 @@ Our Goal is to give our customers that nostalgic feelings of renting movies in t
 
 ## Basic Features
 
-- Lists movies with retro designs
-- Movies are categorized 
-- Each VHS tape shows rental price and sale price
-- Each movie has an indicator to show the user run time
+- Lists movies with retro designs;
+- Each movie shows user rating;
+- Description is displayed when the 'View detail' button is clicked; 
+- Creation of 'Add Comment' box;
+- 'Add to Cart' button is configured to display.
 
 ## Technologies Used 
 
