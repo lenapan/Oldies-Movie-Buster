@@ -95,3 +95,12 @@ background-color:#198754;
 .fa-smile-o{
   margin: 0 0 6px 0;
 }
+.profileImg{
+  width: 32px;
+  height: 32px;
+  margin-left: 10px;
+}
+.profileName{
+  font-size: 18px;
+  font-weight: bold;
+}
